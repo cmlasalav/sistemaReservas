@@ -1,1 +1,167 @@
-(()=>{var e={};e.id=332,e.ids=[220,332,636],e.modules={671:(e,r)=>{"use strict";Object.defineProperty(r,"M",{enumerable:!0,get:function(){return function e(r,s){return s in r?r[s]:"then"in r&&"function"==typeof r.then?r.then(r=>e(r,s)):"function"==typeof r&&"default"===s?r:void 0}}})},764:(e,r,s)=>{"use strict";s.r(r),s.d(r,{config:()=>k,default:()=>S,getServerSideProps:()=>E,getStaticPaths:()=>M,getStaticProps:()=>A,reportWebVitals:()=>_,routeModule:()=>$,unstable_getServerProps:()=>R,unstable_getServerSideProps:()=>O,unstable_getStaticParams:()=>q,unstable_getStaticPaths:()=>G,unstable_getStaticProps:()=>C});var t={};s.r(t),s.d(t,{default:()=>v});var a=s(865),n=s(455),i=s(671),l=s(781),o=s.n(l),d=s(327),c=s(732),m=s(15);let u=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),p=(...e)=>e.filter((e,r,s)=>!!e&&""!==e.trim()&&s.indexOf(e)===r).join(" ").trim();var h={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};let x=(0,m.forwardRef)(({color:e="currentColor",size:r=24,strokeWidth:s=2,absoluteStrokeWidth:t,className:a="",children:n,iconNode:i,...l},o)=>(0,m.createElement)("svg",{ref:o,...h,width:r,height:r,stroke:e,strokeWidth:t?24*Number(s)/Number(r):s,className:p("lucide",a),...l},[...i.map(([e,r])=>(0,m.createElement)(e,r)),...Array.isArray(n)?n:[n]])),f=(e,r)=>{let s=(0,m.forwardRef)(({className:s,...t},a)=>(0,m.createElement)(x,{ref:a,iconNode:r,className:p(`lucide-${u(e)}`,s),...t}));return s.displayName=`${e}`,s},g=f("EyeOff",[["path",{d:"M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49",key:"ct8e1f"}],["path",{d:"M14.084 14.158a3 3 0 0 1-4.242-4.242",key:"151rxh"}],["path",{d:"M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143",key:"13bj9a"}],["path",{d:"m2 2 20 20",key:"1ooewy"}]]),b=f("Eye",[["path",{d:"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",key:"1nclc0"}],["circle",{cx:"12",cy:"12",r:"3",key:"1v7zrd"}]]),P=({children:e,className:r,...s})=>(0,c.jsx)("button",{className:`px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${r}`,...s,children:e}),w=({className:e,...r})=>(0,c.jsx)("input",{className:`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${e}`,...r}),j=({children:e,...r})=>(0,c.jsx)("label",{className:"block text-sm font-medium text-gray-700",...r,children:e}),N=({children:e,className:r,...s})=>(0,c.jsx)("div",{className:`bg-white shadow-md rounded-lg p-6 ${r}`,...s,children:e});function y(){let[e,r]=(0,m.useState)({name:"",email:"",password:"",confirmPassword:"",phoneNumber:""}),[s,t]=(0,m.useState)({}),[a,n]=(0,m.useState)(!1),i=e=>{let{name:s,value:t}=e.target;r(e=>({...e,[s]:t}))},l=()=>{let r={};return e.name.trim()||(r.name="Name is required"),e.email.trim()?/\S+@\S+\.\S+/.test(e.email)||(r.email="Email is invalid"):r.email="Email is required",e.password.length<8&&(r.password="Password must be at least 8 characters long"),e.password!==e.confirmPassword&&(r.confirmPassword="Passwords do not match"),e.phoneNumber.trim()||(r.phoneNumber="Phone number is required"),t(r),0===Object.keys(r).length},o=async r=>{r.preventDefault(),l()&&(console.log("Form submitted:",e),t({email:"This email is already registered"}))};return(0,c.jsx)("div",{className:"min-h-screen bg-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8",children:(0,c.jsxs)(N,{className:"w-full max-w-md",children:[(0,c.jsxs)("div",{className:"space-y-1 text-center",children:[(0,c.jsx)("h2",{className:"text-2xl font-bold",children:"Create an account"}),(0,c.jsx)("p",{className:"text-gray-500",children:"Register for our Hotel Reservation System"})]}),(0,c.jsxs)("form",{onSubmit:o,className:"space-y-4 mt-4",children:[(0,c.jsxs)("div",{className:"space-y-2",children:[(0,c.jsx)(j,{htmlFor:"name",children:"Name"}),(0,c.jsx)(w,{id:"name",name:"name",type:"text",placeholder:"John Doe",value:e.name,onChange:i,className:s.name?"border-red-500":""}),s.name&&(0,c.jsx)("p",{className:"text-red-500 text-sm",children:s.name})]}),(0,c.jsxs)("div",{className:"space-y-2",children:[(0,c.jsx)(j,{htmlFor:"email",children:"Email"}),(0,c.jsx)(w,{id:"email",name:"email",type:"email",placeholder:"john@example.com",value:e.email,onChange:i,className:s.email?"border-red-500":""}),s.email&&(0,c.jsx)("p",{className:"text-red-500 text-sm",children:s.email})]}),(0,c.jsxs)("div",{className:"space-y-2",children:[(0,c.jsx)(j,{htmlFor:"password",children:"Password"}),(0,c.jsxs)("div",{className:"relative",children:[(0,c.jsx)(w,{id:"password",name:"password",type:a?"text":"password",placeholder:"********",value:e.password,onChange:i,className:s.password?"border-red-500":""}),(0,c.jsx)("button",{type:"button",onClick:()=>n(!a),className:"absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5",children:a?(0,c.jsx)(g,{className:"h-4 w-4 text-gray-500"}):(0,c.jsx)(b,{className:"h-4 w-4 text-gray-500"})})]}),s.password&&(0,c.jsx)("p",{className:"text-red-500 text-sm",children:s.password})]}),(0,c.jsxs)("div",{className:"space-y-2",children:[(0,c.jsx)(j,{htmlFor:"confirmPassword",children:"Confirm Password"}),(0,c.jsx)(w,{id:"confirmPassword",name:"confirmPassword",type:"password",placeholder:"********",value:e.confirmPassword,onChange:i,className:s.confirmPassword?"border-red-500":""}),s.confirmPassword&&(0,c.jsx)("p",{className:"text-red-500 text-sm",children:s.confirmPassword})]}),(0,c.jsxs)("div",{className:"space-y-2",children:[(0,c.jsx)(j,{htmlFor:"phoneNumber",children:"Phone Number"}),(0,c.jsx)(w,{id:"phoneNumber",name:"phoneNumber",type:"tel",placeholder:"+1 (555) 123-4567",value:e.phoneNumber,onChange:i,className:s.phoneNumber?"border-red-500":""}),s.phoneNumber&&(0,c.jsx)("p",{className:"text-red-500 text-sm",children:s.phoneNumber})]}),(0,c.jsx)(P,{type:"submit",className:"w-full",children:"Register"})]})]})})}function v(){return(0,c.jsx)(y,{})}let S=(0,i.M)(t,"default"),A=(0,i.M)(t,"getStaticProps"),M=(0,i.M)(t,"getStaticPaths"),E=(0,i.M)(t,"getServerSideProps"),k=(0,i.M)(t,"config"),_=(0,i.M)(t,"reportWebVitals"),C=(0,i.M)(t,"unstable_getStaticProps"),G=(0,i.M)(t,"unstable_getStaticPaths"),q=(0,i.M)(t,"unstable_getStaticParams"),R=(0,i.M)(t,"unstable_getServerProps"),O=(0,i.M)(t,"unstable_getServerSideProps"),$=new a.PagesRouteModule({definition:{kind:n.A.PAGES,page:"/index",pathname:"/",bundlePath:"",filename:""},components:{App:d.default,Document:o()},userland:t})},327:(e,r,s)=>{"use strict";s.r(r),s.d(r,{default:()=>a});var t=s(732);s(651);let a=function({Component:e,pageProps:r}){return(0,t.jsx)(e,{...r})}},651:()=>{},455:(e,r)=>{"use strict";Object.defineProperty(r,"A",{enumerable:!0,get:function(){return s}});var s=function(e){return e.PAGES="PAGES",e.PAGES_API="PAGES_API",e.APP_PAGE="APP_PAGE",e.APP_ROUTE="APP_ROUTE",e.IMAGE="IMAGE",e}({})},361:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},15:e=>{"use strict";e.exports=require("react")},732:e=>{"use strict";e.exports=require("react/jsx-runtime")},873:e=>{"use strict";e.exports=require("path")}};var r=require("../webpack-runtime.js");r.C(e);var s=e=>r(r.s=e),t=r.X(0,[781],()=>s(764));module.exports=t})();
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/index";
+exports.ids = ["pages/index"];
+exports.modules = {
+
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%5Cindex.jsx&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%5Cindex.jsx&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D! ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   getServerSideProps: () => (/* binding */ getServerSideProps),\n/* harmony export */   getStaticPaths: () => (/* binding */ getStaticPaths),\n/* harmony export */   getStaticProps: () => (/* binding */ getStaticProps),\n/* harmony export */   reportWebVitals: () => (/* binding */ reportWebVitals),\n/* harmony export */   routeModule: () => (/* binding */ routeModule),\n/* harmony export */   unstable_getServerProps: () => (/* binding */ unstable_getServerProps),\n/* harmony export */   unstable_getServerSideProps: () => (/* binding */ unstable_getServerSideProps),\n/* harmony export */   unstable_getStaticParams: () => (/* binding */ unstable_getStaticParams),\n/* harmony export */   unstable_getStaticPaths: () => (/* binding */ unstable_getStaticPaths),\n/* harmony export */   unstable_getStaticProps: () => (/* binding */ unstable_getStaticProps)\n/* harmony export */ });\n/* harmony import */ var next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/server/route-modules/pages/module.compiled */ \"./node_modules/next/dist/server/route-modules/pages/module.compiled.js\");\n/* harmony import */ var next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/server/route-kind */ \"./node_modules/next/dist/server/route-kind.js\");\n/* harmony import */ var next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dist/build/templates/helpers */ \"./node_modules/next/dist/build/templates/helpers.js\");\n/* harmony import */ var private_next_pages_document__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! private-next-pages/_document */ \"./node_modules/next/dist/pages/_document.js\");\n/* harmony import */ var private_next_pages_document__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(private_next_pages_document__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var private_next_pages_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! private-next-pages/_app */ \"./pages/_app.jsx\");\n/* harmony import */ var _pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages\\index.jsx */ \"./pages/index.jsx\");\n\n\n\n// Import the app and document modules.\n\n\n// Import the userland code.\n\n// Re-export the component (should be the default export).\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'default'));\n// Re-export methods.\nconst getStaticProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'getStaticProps');\nconst getStaticPaths = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'getStaticPaths');\nconst getServerSideProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'getServerSideProps');\nconst config = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'config');\nconst reportWebVitals = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'reportWebVitals');\n// Re-export legacy methods.\nconst unstable_getStaticProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getStaticProps');\nconst unstable_getStaticPaths = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getStaticPaths');\nconst unstable_getStaticParams = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getStaticParams');\nconst unstable_getServerProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getServerProps');\nconst unstable_getServerSideProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getServerSideProps');\n// Create and export the route module that will be consumed.\nconst routeModule = new next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0__.PagesRouteModule({\n    definition: {\n        kind: next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__.RouteKind.PAGES,\n        page: \"/index\",\n        pathname: \"/\",\n        // The following aren't used in production.\n        bundlePath: '',\n        filename: ''\n    },\n    components: {\n        // default export might not exist when optimized for data only\n        App: private_next_pages_app__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n        Document: (private_next_pages_document__WEBPACK_IMPORTED_MODULE_3___default())\n    },\n    userland: _pages_index_jsx__WEBPACK_IMPORTED_MODULE_5__\n});\n\n//# sourceMappingURL=pages.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9pbmRleC5qcz9raW5kPVBBR0VTJnBhZ2U9JTJGJnByZWZlcnJlZFJlZ2lvbj0mYWJzb2x1dGVQYWdlUGF0aD0uJTJGcGFnZXMlNUNpbmRleC5qc3gmYWJzb2x1dGVBcHBQYXRoPXByaXZhdGUtbmV4dC1wYWdlcyUyRl9hcHAmYWJzb2x1dGVEb2N1bWVudFBhdGg9cHJpdmF0ZS1uZXh0LXBhZ2VzJTJGX2RvY3VtZW50Jm1pZGRsZXdhcmVDb25maWdCYXNlNjQ9ZTMwJTNEISIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUF3RjtBQUNoQztBQUNFO0FBQzFEO0FBQ3lEO0FBQ1Y7QUFDL0M7QUFDK0M7QUFDL0M7QUFDQSxpRUFBZSx3RUFBSyxDQUFDLDZDQUFRLFlBQVksRUFBQztBQUMxQztBQUNPLHVCQUF1Qix3RUFBSyxDQUFDLDZDQUFRO0FBQ3JDLHVCQUF1Qix3RUFBSyxDQUFDLDZDQUFRO0FBQ3JDLDJCQUEyQix3RUFBSyxDQUFDLDZDQUFRO0FBQ3pDLGVBQWUsd0VBQUssQ0FBQyw2Q0FBUTtBQUM3Qix3QkFBd0Isd0VBQUssQ0FBQyw2Q0FBUTtBQUM3QztBQUNPLGdDQUFnQyx3RUFBSyxDQUFDLDZDQUFRO0FBQzlDLGdDQUFnQyx3RUFBSyxDQUFDLDZDQUFRO0FBQzlDLGlDQUFpQyx3RUFBSyxDQUFDLDZDQUFRO0FBQy9DLGdDQUFnQyx3RUFBSyxDQUFDLDZDQUFRO0FBQzlDLG9DQUFvQyx3RUFBSyxDQUFDLDZDQUFRO0FBQ3pEO0FBQ08sd0JBQXdCLGtHQUFnQjtBQUMvQztBQUNBLGNBQWMsa0VBQVM7QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0EsYUFBYSw4REFBVztBQUN4QixrQkFBa0Isb0VBQWdCO0FBQ2xDLEtBQUs7QUFDTCxZQUFZO0FBQ1osQ0FBQzs7QUFFRCIsInNvdXJjZXMiOlsiIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFBhZ2VzUm91dGVNb2R1bGUgfSBmcm9tIFwibmV4dC9kaXN0L3NlcnZlci9yb3V0ZS1tb2R1bGVzL3BhZ2VzL21vZHVsZS5jb21waWxlZFwiO1xuaW1wb3J0IHsgUm91dGVLaW5kIH0gZnJvbSBcIm5leHQvZGlzdC9zZXJ2ZXIvcm91dGUta2luZFwiO1xuaW1wb3J0IHsgaG9pc3QgfSBmcm9tIFwibmV4dC9kaXN0L2J1aWxkL3RlbXBsYXRlcy9oZWxwZXJzXCI7XG4vLyBJbXBvcnQgdGhlIGFwcCBhbmQgZG9jdW1lbnQgbW9kdWxlcy5cbmltcG9ydCAqIGFzIGRvY3VtZW50IGZyb20gXCJwcml2YXRlLW5leHQtcGFnZXMvX2RvY3VtZW50XCI7XG5pbXBvcnQgKiBhcyBhcHAgZnJvbSBcInByaXZhdGUtbmV4dC1wYWdlcy9fYXBwXCI7XG4vLyBJbXBvcnQgdGhlIHVzZXJsYW5kIGNvZGUuXG5pbXBvcnQgKiBhcyB1c2VybGFuZCBmcm9tIFwiLi9wYWdlc1xcXFxpbmRleC5qc3hcIjtcbi8vIFJlLWV4cG9ydCB0aGUgY29tcG9uZW50IChzaG91bGQgYmUgdGhlIGRlZmF1bHQgZXhwb3J0KS5cbmV4cG9ydCBkZWZhdWx0IGhvaXN0KHVzZXJsYW5kLCAnZGVmYXVsdCcpO1xuLy8gUmUtZXhwb3J0IG1ldGhvZHMuXG5leHBvcnQgY29uc3QgZ2V0U3RhdGljUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgJ2dldFN0YXRpY1Byb3BzJyk7XG5leHBvcnQgY29uc3QgZ2V0U3RhdGljUGF0aHMgPSBob2lzdCh1c2VybGFuZCwgJ2dldFN0YXRpY1BhdGhzJyk7XG5leHBvcnQgY29uc3QgZ2V0U2VydmVyU2lkZVByb3BzID0gaG9pc3QodXNlcmxhbmQsICdnZXRTZXJ2ZXJTaWRlUHJvcHMnKTtcbmV4cG9ydCBjb25zdCBjb25maWcgPSBob2lzdCh1c2VybGFuZCwgJ2NvbmZpZycpO1xuZXhwb3J0IGNvbnN0IHJlcG9ydFdlYlZpdGFscyA9IGhvaXN0KHVzZXJsYW5kLCAncmVwb3J0V2ViVml0YWxzJyk7XG4vLyBSZS1leHBvcnQgbGVnYWN5IG1ldGhvZHMuXG5leHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgJ3Vuc3RhYmxlX2dldFN0YXRpY1Byb3BzJyk7XG5leHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUGF0aHMgPSBob2lzdCh1c2VybGFuZCwgJ3Vuc3RhYmxlX2dldFN0YXRpY1BhdGhzJyk7XG5leHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUGFyYW1zID0gaG9pc3QodXNlcmxhbmQsICd1bnN0YWJsZV9nZXRTdGF0aWNQYXJhbXMnKTtcbmV4cG9ydCBjb25zdCB1bnN0YWJsZV9nZXRTZXJ2ZXJQcm9wcyA9IGhvaXN0KHVzZXJsYW5kLCAndW5zdGFibGVfZ2V0U2VydmVyUHJvcHMnKTtcbmV4cG9ydCBjb25zdCB1bnN0YWJsZV9nZXRTZXJ2ZXJTaWRlUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgJ3Vuc3RhYmxlX2dldFNlcnZlclNpZGVQcm9wcycpO1xuLy8gQ3JlYXRlIGFuZCBleHBvcnQgdGhlIHJvdXRlIG1vZHVsZSB0aGF0IHdpbGwgYmUgY29uc3VtZWQuXG5leHBvcnQgY29uc3Qgcm91dGVNb2R1bGUgPSBuZXcgUGFnZXNSb3V0ZU1vZHVsZSh7XG4gICAgZGVmaW5pdGlvbjoge1xuICAgICAgICBraW5kOiBSb3V0ZUtpbmQuUEFHRVMsXG4gICAgICAgIHBhZ2U6IFwiL2luZGV4XCIsXG4gICAgICAgIHBhdGhuYW1lOiBcIi9cIixcbiAgICAgICAgLy8gVGhlIGZvbGxvd2luZyBhcmVuJ3QgdXNlZCBpbiBwcm9kdWN0aW9uLlxuICAgICAgICBidW5kbGVQYXRoOiAnJyxcbiAgICAgICAgZmlsZW5hbWU6ICcnXG4gICAgfSxcbiAgICBjb21wb25lbnRzOiB7XG4gICAgICAgIC8vIGRlZmF1bHQgZXhwb3J0IG1pZ2h0IG5vdCBleGlzdCB3aGVuIG9wdGltaXplZCBmb3IgZGF0YSBvbmx5XG4gICAgICAgIEFwcDogYXBwLmRlZmF1bHQsXG4gICAgICAgIERvY3VtZW50OiBkb2N1bWVudC5kZWZhdWx0XG4gICAgfSxcbiAgICB1c2VybGFuZFxufSk7XG5cbi8vIyBzb3VyY2VNYXBwaW5nVVJMPXBhZ2VzLmpzLm1hcCJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%5Cindex.jsx&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!\n");
+
+/***/ }),
+
+/***/ "./pages/_app.jsx":
+/*!************************!*\
+  !*** ./pages/_app.jsx ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/global.css */ \"./styles/global.css\");\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction MyApp({ Component, pageProps }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n        ...pageProps\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\CMLV\\\\Documents\\\\GitHub\\\\sistemaReservas\\\\pages\\\\_app.jsx\",\n        lineNumber: 4,\n        columnNumber: 10\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBOEI7QUFFOUIsU0FBU0EsTUFBTSxFQUFFQyxTQUFTLEVBQUVDLFNBQVMsRUFBRTtJQUNyQyxxQkFBTyw4REFBQ0Q7UUFBVyxHQUFHQyxTQUFTOzs7Ozs7QUFDakM7QUFFQSxpRUFBZUYsS0FBS0EsRUFBQyIsInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxDTUxWXFxEb2N1bWVudHNcXEdpdEh1Ylxcc2lzdGVtYVJlc2VydmFzXFxwYWdlc1xcX2FwcC5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi4vc3R5bGVzL2dsb2JhbC5jc3NcIjtcclxuXHJcbmZ1bmN0aW9uIE15QXBwKHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfSkge1xyXG4gIHJldHVybiA8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+O1xyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBNeUFwcDtcclxuIl0sIm5hbWVzIjpbIk15QXBwIiwiQ29tcG9uZW50IiwicGFnZVByb3BzIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/_app.jsx\n");
+
+/***/ }),
+
+/***/ "./pages/index.jsx":
+/*!*************************!*\
+  !*** ./pages/index.jsx ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ HUPage)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ \"./node_modules/next/router.js\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ \"./node_modules/next/link.js\");\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction HUPage() {\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();\n    const { _id } = router.query;\n    const huButtons = Array.from({\n        length: 17\n    }, (_, i)=>i + 1);\n    const huNames = [\n        \"HU_Registro de usuario\",\n        \"HU_Iniciar sesión y Recuperación de contraseña\",\n        \"HU_Pago en línea\",\n        \"HU_Reseñas y califaciones\",\n        \"HU_Notificaciones y Recordatorios\",\n        \"HU_Gestion de Reservas\",\n        \"HU_Busqueda y Seleccion de habitaciones\",\n        \"HU_Seguridad\",\n        \"HU_Rendimiento\",\n        \"HU_Usabilidad\",\n        \"HU_Escalabilidad\",\n        \"HU_Mantenibilidad\",\n        \"HU_Reservas de habitaciones\",\n        \"HU_Servicios Adicionales\",\n        \"HU_Panel de administradores\",\n        \"HU_Informes\",\n        \"HU_Recomendaciones\"\n    ];\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"min-h-screen bg-gray-100 p-4\",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"grid grid-cols-4 gap-4 mb-8\",\n            children: huButtons.map((num, index)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {\n                    href: `/HU/${num}`,\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: `text-white font-bold py-2 px-4 rounded text-center ${num === Number.parseInt(_id) ? \"bg-blue-700\" : \"bg-blue-500 hover:bg-blue-700\"}`,\n                        children: huNames[index]\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\CMLV\\\\Documents\\\\GitHub\\\\sistemaReservas\\\\pages\\\\index.jsx\",\n                        lineNumber: 34,\n                        columnNumber: 13\n                    }, this)\n                }, num, false, {\n                    fileName: \"C:\\\\Users\\\\CMLV\\\\Documents\\\\GitHub\\\\sistemaReservas\\\\pages\\\\index.jsx\",\n                    lineNumber: 33,\n                    columnNumber: 11\n                }, this))\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\CMLV\\\\Documents\\\\GitHub\\\\sistemaReservas\\\\pages\\\\index.jsx\",\n            lineNumber: 31,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\CMLV\\\\Documents\\\\GitHub\\\\sistemaReservas\\\\pages\\\\index.jsx\",\n        lineNumber: 30,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC5qc3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBd0M7QUFDWDtBQUVkLFNBQVNFO0lBQ3RCLE1BQU1DLFNBQVNILHNEQUFTQTtJQUN4QixNQUFNLEVBQUVJLEdBQUcsRUFBRSxHQUFHRCxPQUFPRSxLQUFLO0lBRTVCLE1BQU1DLFlBQVlDLE1BQU1DLElBQUksQ0FBQztRQUFFQyxRQUFRO0lBQUcsR0FBRyxDQUFDQyxHQUFHQyxJQUFNQSxJQUFJO0lBQzNELE1BQU1DLFVBQVU7UUFDZDtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO0tBQ0Q7SUFFRCxxQkFDRSw4REFBQ0M7UUFBSUMsV0FBVTtrQkFDYiw0RUFBQ0Q7WUFBSUMsV0FBVTtzQkFDWlIsVUFBVVMsR0FBRyxDQUFDLENBQUNDLEtBQUtDLHNCQUNuQiw4REFBQ2hCLGtEQUFJQTtvQkFBQ2lCLE1BQU0sQ0FBQyxJQUFJLEVBQUVGLEtBQUs7OEJBQ3RCLDRFQUFDSDt3QkFDQ0MsV0FBVyxDQUFDLG1EQUFtRCxFQUM3REUsUUFBUUcsT0FBT0MsUUFBUSxDQUFDaEIsT0FDcEIsZ0JBQ0EsaUNBQ0o7a0NBR0ZRLE9BQU8sQ0FBQ0ssTUFBTTs7Ozs7O21CQVRhRDs7Ozs7Ozs7Ozs7Ozs7O0FBZ0J6QyIsInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxDTUxWXFxEb2N1bWVudHNcXEdpdEh1Ylxcc2lzdGVtYVJlc2VydmFzXFxwYWdlc1xcaW5kZXguanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZVJvdXRlciB9IGZyb20gXCJuZXh0L3JvdXRlclwiO1xyXG5pbXBvcnQgTGluayBmcm9tIFwibmV4dC9saW5rXCI7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIVVBhZ2UoKSB7XHJcbiAgY29uc3Qgcm91dGVyID0gdXNlUm91dGVyKCk7XHJcbiAgY29uc3QgeyBfaWQgfSA9IHJvdXRlci5xdWVyeTtcclxuXHJcbiAgY29uc3QgaHVCdXR0b25zID0gQXJyYXkuZnJvbSh7IGxlbmd0aDogMTcgfSwgKF8sIGkpID0+IGkgKyAxKTtcclxuICBjb25zdCBodU5hbWVzID0gW1xyXG4gICAgXCJIVV9SZWdpc3RybyBkZSB1c3VhcmlvXCIsXHJcbiAgICBcIkhVX0luaWNpYXIgc2VzacOzbiB5IFJlY3VwZXJhY2nDs24gZGUgY29udHJhc2XDsWFcIixcclxuICAgIFwiSFVfUGFnbyBlbiBsw61uZWFcIixcclxuICAgIFwiSFVfUmVzZW7Mg2FzIHkgY2FsaWZhY2lvbmVzXCIsXHJcbiAgICBcIkhVX05vdGlmaWNhY2lvbmVzIHkgUmVjb3JkYXRvcmlvc1wiLFxyXG4gICAgXCJIVV9HZXN0aW9uIGRlIFJlc2VydmFzXCIsXHJcbiAgICBcIkhVX0J1c3F1ZWRhIHkgU2VsZWNjaW9uIGRlIGhhYml0YWNpb25lc1wiLFxyXG4gICAgXCJIVV9TZWd1cmlkYWRcIixcclxuICAgIFwiSFVfUmVuZGltaWVudG9cIixcclxuICAgIFwiSFVfVXNhYmlsaWRhZFwiLFxyXG4gICAgXCJIVV9Fc2NhbGFiaWxpZGFkXCIsXHJcbiAgICBcIkhVX01hbnRlbmliaWxpZGFkXCIsXHJcbiAgICBcIkhVX1Jlc2VydmFzIGRlIGhhYml0YWNpb25lc1wiLFxyXG4gICAgXCJIVV9TZXJ2aWNpb3MgQWRpY2lvbmFsZXNcIixcclxuICAgIFwiSFVfUGFuZWwgZGUgYWRtaW5pc3RyYWRvcmVzXCIsXHJcbiAgICBcIkhVX0luZm9ybWVzXCIsXHJcbiAgICBcIkhVX1JlY29tZW5kYWNpb25lc1wiLFxyXG4gIF1cclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWluLWgtc2NyZWVuIGJnLWdyYXktMTAwIHAtNFwiPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLTQgZ2FwLTQgbWItOFwiPlxyXG4gICAgICAgIHtodUJ1dHRvbnMubWFwKChudW0sIGluZGV4KSA9PiAoXHJcbiAgICAgICAgICA8TGluayBocmVmPXtgL0hVLyR7bnVtfWB9IGtleT17bnVtfT5cclxuICAgICAgICAgICAgPGRpdlxyXG4gICAgICAgICAgICAgIGNsYXNzTmFtZT17YHRleHQtd2hpdGUgZm9udC1ib2xkIHB5LTIgcHgtNCByb3VuZGVkIHRleHQtY2VudGVyICR7XHJcbiAgICAgICAgICAgICAgICBudW0gPT09IE51bWJlci5wYXJzZUludChfaWQpXHJcbiAgICAgICAgICAgICAgICAgID8gXCJiZy1ibHVlLTcwMFwiXHJcbiAgICAgICAgICAgICAgICAgIDogXCJiZy1ibHVlLTUwMCBob3ZlcjpiZy1ibHVlLTcwMFwiXHJcbiAgICAgICAgICAgICAgfWB9XHJcbiAgICAgICAgICAgID5cclxuICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAge2h1TmFtZXNbaW5kZXhdfVxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgIDwvTGluaz5cclxuICAgICAgICApKX1cclxuICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59XHJcbiJdLCJuYW1lcyI6WyJ1c2VSb3V0ZXIiLCJMaW5rIiwiSFVQYWdlIiwicm91dGVyIiwiX2lkIiwicXVlcnkiLCJodUJ1dHRvbnMiLCJBcnJheSIsImZyb20iLCJsZW5ndGgiLCJfIiwiaSIsImh1TmFtZXMiLCJkaXYiLCJjbGFzc05hbWUiLCJtYXAiLCJudW0iLCJpbmRleCIsImhyZWYiLCJOdW1iZXIiLCJwYXJzZUludCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/index.jsx\n");
+
+/***/ }),
+
+/***/ "./styles/global.css":
+/*!***************************!*\
+  !*** ./styles/global.css ***!
+  \***************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "next/dist/compiled/next-server/pages.runtime.dev.js":
+/*!**********************************************************************!*\
+  !*** external "next/dist/compiled/next-server/pages.runtime.dev.js" ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/next-server/pages.runtime.dev.js");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!************************************!*\
+  !*** external "react/jsx-runtime" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
+
+/***/ }),
+
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc"], () => (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%5Cindex.jsx&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!")));
+module.exports = __webpack_exports__;
+
+})();

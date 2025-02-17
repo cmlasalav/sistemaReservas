@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HUPage() {
   const router = useRouter();
-  const { _id } = router.query;
+  // const { _id } = router.query;
 
   const huButtons = Array.from({ length: 17 }, (_, i) => i + 1);
   const huNames = [
@@ -24,7 +24,7 @@ export default function HUPage() {
     "HU_Panel de administradores",
     "HU_Informes",
     "HU_Recomendaciones",
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
@@ -33,13 +33,13 @@ export default function HUPage() {
           <Link href={`/HU/${num}`} key={num}>
             <div
               className={`text-white font-bold py-2 px-4 rounded text-center ${
-                num === Number.parseInt(_id)
-                  ? "bg-blue-700"
-                  : "bg-blue-500 hover:bg-blue-700"
+                // num === Number.parseInt(_id)
+                // ? "bg-blue-700"
+                // :
+                "bg-blue-500 hover:bg-blue-700"
               }`}
             >
-             
-             {huNames[index]}
+              {huNames[index]}
             </div>
           </Link>
         ))}

@@ -2,33 +2,48 @@
 
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { Eye, EyeOff, Loader } from "lucide-react";
 
-export default function Login() {
-  const [email, setEmail] = useState("");
+export default function ResetPassword() {
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState("");
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
+    setMessage("");
     setIsLoading(true);
 
+    // Validar la contraseña
+    if (password.length < 8) {
+      setMessage("La contraseña debe tener al menos 8 caracteres.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setMessage("Las contraseñas no coinciden.");
+      setIsLoading(false);
+      return;
+    }
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Aquí iría la llamada real a tu API para restablecer la contraseña
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula una demora de 2 segundos
 
-      if (email !== "usuario@ejemplo.com" || password !== "contraseña123") {
-        throw new Error("Credenciales incorrectas");
-      }
-
-      alert("¡Bienvenido!");
-      //router.push("/dashboard")
+      // Simular éxito en el restablecimiento de la contraseña
+      setMessage("Su contraseña fue actualizada con éxito");
+      setTimeout(() => {
+        router.push("/HU/2");
+      }, 2000);
     } catch (err) {
-      setError("El correo electrónico o la contraseña no son correctos");
+      setMessage(
+        "Ocurrió un error al restablecer la contraseña. Por favor, intente nuevamente."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -38,7 +53,7 @@ export default function Login() {
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Iniciar sesión
+          Restablecer contraseña
         </h2>
       </div>
 
@@ -47,38 +62,17 @@ export default function Login() {
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Correo electrónico
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700"
               >
-                Contraseña
+                Nueva contraseña
               </label>
               <div className="mt-1 relative">
                 <input
                   id="password"
                   name="password"
                   type={showPassword ? "text" : "password"}
-                  autoComplete="current-password"
+                  autoComplete="new-password"
                   required
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   value={password}
@@ -98,7 +92,47 @@ export default function Login() {
               </div>
             </div>
 
-            {error && <div className="text-red-600 text-sm">{error}</div>}
+            <div>
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Confirmar nueva contraseña
+              </label>
+              <div className="mt-1 relative">
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type={showConfirmPassword ? "text" : "password"}
+                  autoComplete="new-password"
+                  required
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                >
+                  {showConfirmPassword ? (
+                    <EyeOff className="h-5 w-5 text-gray-500" />
+                  ) : (
+                    <Eye className="h-5 w-5 text-gray-500" />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {message && (
+              <div
+                className={`text-sm ${
+                  message.includes("éxito") ? "text-green-600" : "text-red-600"
+                }`}
+              >
+                {message}
+              </div>
+            )}
 
             <div>
               <button
@@ -109,32 +143,11 @@ export default function Login() {
                 {isLoading ? (
                   <Loader className="animate-spin h-5 w-5 mr-3" />
                 ) : (
-                  "Iniciar sesión"
+                  "Restablecer contraseña"
                 )}
               </button>
             </div>
           </form>
-
-          <div className="mt-6">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">
-                  ¿Olvidaste tu contraseña?
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <Link href="/forgotpassword">
-                <div className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-gray-50">
-                  Recuperar contraseña
-                </div>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>

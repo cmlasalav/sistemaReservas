@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function HUPage() {
   const router = useRouter();
-  // const { _id } = router.query;
+  const { _id } = router.query;
 
-  const huButtons = Array.from({ length: 17 }, (_, i) => i + 1);
+  const huButtons = Array.from({ length: 12 }, (_, i) => i + 1);
   const huNames = [
     "HU_Registro de usuario",
     "HU_Iniciar sesión y Recuperación de contraseña",
@@ -14,17 +14,12 @@ export default function HUPage() {
     "HU_Notificaciones y Recordatorios",
     "HU_Gestion de Reservas",
     "HU_Busqueda y Seleccion de habitaciones",
-    "HU_Seguridad",
-    "HU_Rendimiento",
-    "HU_Usabilidad",
-    "HU_Escalabilidad",
-    "HU_Mantenibilidad",
     "HU_Reservas de habitaciones",
     "HU_Servicios Adicionales",
     "HU_Panel de administradores",
     "HU_Informes",
     "HU_Recomendaciones",
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
@@ -33,13 +28,13 @@ export default function HUPage() {
           <Link href={`/HU/${num}`} key={num}>
             <div
               className={`text-white font-bold py-2 px-4 rounded text-center ${
-                // num === Number.parseInt(_id)
-                // ? "bg-blue-700"
-                // :
-                "bg-blue-500 hover:bg-blue-700"
+                num === Number.parseInt(_id)
+                  ? "bg-blue-700"
+                  : "bg-blue-500 hover:bg-blue-700"
               }`}
             >
-              {huNames[index]}
+             
+             {huNames[index]}
             </div>
           </Link>
         ))}

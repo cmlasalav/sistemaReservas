@@ -90,6 +90,10 @@ const RoomDetails = () => {
     // router.push('/booking/confirm')
   };
 
+  const handleBack = () => {
+    router.push("/");
+  };
+
   if (!room) {
     return <div className="container mx-auto px-4 py-8">Cargando...</div>;
   }
@@ -97,6 +101,12 @@ const RoomDetails = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">{room.name}</h1>
+      <button
+        onClick={handleBack}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto mb-2"
+      >
+        Regresar
+      </button>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <Carousel showThumbs={false} showStatus={false}>

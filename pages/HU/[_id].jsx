@@ -8,6 +8,7 @@ import EmailNotifications from "@components/RemindersComponents/Reminder/Notific
 import Reservation from "@components/ReservationComponents/Reservation";
 import Page404 from "../404";
 import RoomSearch from "../../components/RoomsComponents/RoomSearch";
+import { Link } from "lucide-react";
 
 export default function HUPage() {
   const router = useRouter();
@@ -19,6 +20,10 @@ export default function HUPage() {
       setId(router.query._id);
     }
   }, [router.isReady, router.query._id]);
+
+  if (id === "8") {
+    router.push("/room/1");
+  }
 
   if (!id) return <p>Cargando...</p>;
 

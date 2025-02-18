@@ -5,7 +5,7 @@ export default function HUPage() {
   const router = useRouter();
   const { _id } = router.query;
 
-  const huButtons = Array.from({ length: 12 }, (_, i) => i + 1);
+  const huButtons = Array.from({ length: 14 }, (_, i) => i + 1);
   const huNames = [
     "HU_Registro de usuario",
     "HU_Iniciar sesión y Recuperación de contraseña",
@@ -19,6 +19,8 @@ export default function HUPage() {
     "HU_Panel de administradores",
     "HU_Informes",
     "HU_Recomendaciones",
+    "HU_HomePage",
+    "HU_Perfil",
   ]
 
   return (

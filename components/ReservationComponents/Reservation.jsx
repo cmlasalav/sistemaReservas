@@ -10,7 +10,7 @@ import EditReservation from "./EditReservation";
 const ReservationManagement = () => {
   const [activeReservations, setActiveReservations] = useState([]);
   const [completedReservations, setCompletedReservations] = useState([]);
-  const [canceledReservations, setCanceledReservations] = useState([]);
+  const [canceledReservations, setCanceledReservations] = useState([]); 
   const [isEditing, setIsEditing] = useState(false);
   const [editingReservation, setEditingReservation] = useState(null);
   const [error, setError] = useState("");

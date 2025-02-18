@@ -10,6 +10,7 @@ import RoomReviews from "@components/ReviewComponents/Review";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Logo from "../../public/Image.jpg";
+import AdditionalServices from "@components/Services/AdditionalServices";
 
 const RoomDetails = () => {
   const router = useRouter();
@@ -157,15 +158,7 @@ const RoomDetails = () => {
               Servicios adicionales:
             </h2>
             <ul>
-              {room.additionalServices.map((service, index) => (
-                <li
-                  key={index}
-                  className="flex justify-between items-center mb-2"
-                >
-                  <span>{service.name}</span>
-                  <span className="font-semibold">${service.price}</span>
-                </li>
-              ))}
+              <AdditionalServices />
             </ul>
           </div>
         </div>

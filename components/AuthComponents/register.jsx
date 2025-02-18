@@ -5,7 +5,7 @@ import { Eye, EyeOff } from "lucide-react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 import Label from "../ui/Label";
-import Card from "../ui/Card";
+import { Card } from "../ui/Card";
 
 export default function RegistrationForm() {
   const [formData, setFormData] = useState({

@@ -8,6 +8,9 @@ import EmailNotifications from "@components/RemindersComponents/Reminder/Notific
 import Reservation from "@components/ReservationComponents/Reservation";
 import Page404 from "../404";
 import RoomSearch from "../../components/RoomsComponents/RoomSearch";
+import ProfilePage from "@components/ProfileComponent/Profile";
+import Home from "@components/HomeComponents/Home";
+import AdditionalServices from "@components/Services/AdditionalServices";
 import { Link } from "lucide-react";
 
 export default function HUPage() {
@@ -41,6 +44,9 @@ export default function HUPage() {
       {id === "5" && <EmailNotifications />}
       {id === "6" && <Reservation />}
       {id === "7" && <RoomSearch />}
+      {id === "9" && <AdditionalServices />}
+      {id === "13" && <Home />}
+      {id === "14" && <ProfilePage />}
     </div>
   );
 }

@@ -235,59 +235,59 @@ const ChangeEmail = () => (
   </div>
 );
 
-const ReviewEmail = () => (
-  <div className="border rounded-lg p-4 bg-gray-50">
-    <div className="bg-white p-6 rounded-lg shadow-sm">
-      <div className="flex justify-between items-center mb-4">
-        <Image
-          src={Logo}
-          width={50}
-          height={25}
-          alt="Hotel Logo"
-          className="h-12"
-        />
-        <span className="text-sm text-gray-500">💬 Respuesta a Reseña</span>
-      </div>
-      <h2 className="text-xl font-semibold mb-4">
-        Han respondido tu reseña en Hotel Pichudo
-      </h2>
-      <p className="mb-4">Hola Carlos,</p>
-      <p className="mb-4">
-        Alguien ha respondido tu reseña en Hotel Pichudo. ¡Nos encantaría que la
-        veas y sigas la conversación!
-      </p>
-      <div className="bg-gray-100 border border-gray-200 rounded-lg p-4 mb-4">
-        <h3 className="font-semibold mb-2">💬 Tu reseña:</h3>
-        <p className="italic mb-2">
-          "La habitación era cómoda, pero el servicio de limpieza podría
-          mejorar."
-        </p>
-        <h3 className="font-semibold mb-2">✍️ Respuesta:</h3>
-        <p className="italic">
-          "Gracias por tu comentario, Carlos. Lamentamos que el servicio de
-          limpieza no cumpliera con tus expectativas. Hemos tomado nota y
-          estamos trabajando para mejorar. Esperamos que nos des otra
-          oportunidad en tu próxima visita."
-        </p>
-      </div>
-      <p className="mb-4">
-        Para ver la respuesta completa y continuar la conversación, haz clic
-        aquí:
-      </p>
-      <Link
-        href="/HU/4"
-        className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-      >
-        🔗 Ver reseña
-      </Link>
-      <p className="mt-4">Gracias por compartir tu experiencia con nosotros.</p>
-      <p className="mt-4">
-        Saludos,
-        <br />
-        Hotel Pichudo
-      </p>
-    </div>
-  </div>
-);
+// const ReviewEmail = () => (
+//   <div className="border rounded-lg p-4 bg-gray-50">
+//     <div className="bg-white p-6 rounded-lg shadow-sm">
+//       <div className="flex justify-between items-center mb-4">
+//         <Image
+//           src={Logo}
+//           width={50}
+//           height={25}
+//           alt="Hotel Logo"
+//           className="h-12"
+//         />
+//         <span className="text-sm text-gray-500">💬 Respuesta a Reseña</span>
+//       </div>
+//       <h2 className="text-xl font-semibold mb-4">
+//         Han respondido tu reseña en Hotel Pichudo
+//       </h2>
+//       <p className="mb-4">Hola Carlos,</p>
+//       <p className="mb-4">
+//         Alguien ha respondido tu reseña en Hotel Pichudo. ¡Nos encantaría que la
+//         veas y sigas la conversación!
+//       </p>
+//       <div className="bg-gray-100 border border-gray-200 rounded-lg p-4 mb-4">
+//         <h3 className="font-semibold mb-2">💬 Tu reseña:</h3>
+//         <p className="italic mb-2">
+//           "La habitación era cómoda, pero el servicio de limpieza podría
+//           mejorar."
+//         </p>
+//         <h3 className="font-semibold mb-2">✍️ Respuesta:</h3>
+//         <p className="italic">
+//           "Gracias por tu comentario, Carlos. Lamentamos que el servicio de
+//           limpieza no cumpliera con tus expectativas. Hemos tomado nota y
+//           estamos trabajando para mejorar. Esperamos que nos des otra
+//           oportunidad en tu próxima visita."
+//         </p>
+//       </div>
+//       <p className="mb-4">
+//         Para ver la respuesta completa y continuar la conversación, haz clic
+//         aquí:
+//       </p>
+//       <Link
+//         href="/HU/4"
+//         className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+//       >
+//         🔗 Ver reseña
+//       </Link>
+//       <p className="mt-4">Gracias por compartir tu experiencia con nosotros.</p>
+//       <p className="mt-4">
+//         Saludos,
+//         <br />
+//         Hotel Pichudo
+//       </p>
+//     </div>
+//   </div>
+// );
 
 export default EmailNotifications;

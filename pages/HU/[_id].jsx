@@ -11,6 +11,7 @@ import RoomSearch from "../../components/RoomsComponents/RoomSearch";
 import ProfilePage from "@components/ProfileComponent/Profile";
 import Home from "@components/HomeComponents/Home";
 import AdditionalServices from "@components/Services/AdditionalServices";
+import AdminDashboard from "@components/AdminComponents/AdminDashboard";
 import { Link } from "lucide-react";
 
 export default function HUPage() {
@@ -33,10 +34,17 @@ export default function HUPage() {
   if (!validIds.includes(id)) {
     return <Page404 />;
   }
+  let idTitle;
+
+  if (id === "10") {
+    idTitle = "10 y 11";
+  } else {
+    idTitle = id;
+  }
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Historia de Usuario {id}</h1>
+      <h1 className="text-2xl font-bold mb-4">Historia de Usuario {idTitle}</h1>
       {id === "1" && <RegisterForm />}
       {id === "2" && <LoginForm />}
       {id === "3" && <PayComponent />}
@@ -45,6 +53,7 @@ export default function HUPage() {
       {id === "6" && <Reservation />}
       {id === "7" && <RoomSearch />}
       {id === "9" && <AdditionalServices />}
+      {id === "10" && <AdminDashboard />}
       {id === "13" && <Home />}
       {id === "14" && <ProfilePage />}
     </div>

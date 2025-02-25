@@ -54,8 +54,8 @@ export default function HUPage() {
       {id === "7" && <RoomSearch />}
       {id === "9" && <AdditionalServices />}
       {id === "10" && <AdminDashboard />}
-      {id === "13" && <Home />}
-      {id === "14" && <ProfilePage />}
+      {id === "12" && <Home />}
+      {id === "13" && <ProfilePage />}
     </div>
   );
 }
